@@ -14,10 +14,13 @@ export default {
         }),
       ],
     });
+
+    client.create.mutate()
+
     return new Response(
-      await client.greet.query({
+      JSON.stringify(await client.list.query({
         name: "Patrick Star",
-      }),
+      }))
     );
   },
 };
