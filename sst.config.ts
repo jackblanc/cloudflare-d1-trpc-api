@@ -8,5 +8,21 @@ export default $config({
       home: "cloudflare",
     };
   },
-  async run() {},
+  async run() {
+    const trpc = new sst.cloudflare.Worker("Trpc", {
+      url: true,
+      handler: "index.ts",
+    });
+  
+    const client = new sst.cloudflare.Worker("Client", {
+      url: true,
+      link: [trpc],
+      handler: "client.ts",
+    });
+  
+    return {
+      api: trpc.url,
+      client: client.url,
+    };
+  }
 });

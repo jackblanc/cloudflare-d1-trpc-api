@@ -10,6 +10,8 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "sst": "ion"
+    "@trpc/server": "^11.0.0-rc.382",
+    "sst": "ion",
+    "zod": "^3.23.8"
   }
 }
