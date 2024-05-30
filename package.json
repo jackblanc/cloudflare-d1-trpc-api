@@ -3,9 +3,13 @@
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
+    "@cloudflare/workers-types": "4.20240529.0",
     "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "sst": "ion"
   }
 }
