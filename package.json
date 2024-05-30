@@ -17,8 +17,8 @@
   "dependencies": {
     "@trpc/client": "^11.0.0-rc.382",
     "@trpc/server": "^11.0.0-rc.382",
-    "drizzle-kit": "^0.21.4",
-    "drizzle-orm": "^0.30.10",
+    "drizzle-kit": "^0.22.0-18d9643",
+    "drizzle-orm": "^0.31.0-6df4b83",
     "sst": "ion",
     "zod": "^3.23.8"
   }
