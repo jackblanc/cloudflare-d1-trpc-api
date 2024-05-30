@@ -3,7 +3,9 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "dev": "sst dev"
+    "dev": "sst dev",
+    "db:generate": "sst shell drizzle-kit generate",
+    "db:migrate": "sst shell drizzle-kit migrate"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "4.20240529.0",
@@ -15,6 +17,8 @@
   "dependencies": {
     "@trpc/client": "^11.0.0-rc.382",
     "@trpc/server": "^11.0.0-rc.382",
+    "drizzle-kit": "^0.21.4",
+    "drizzle-orm": "^0.30.10",
     "sst": "ion",
     "zod": "^3.23.8"
   }
