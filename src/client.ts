@@ -7,7 +7,7 @@ export default {
     const client = createTRPCClient<Router>({
       links: [
         httpBatchLink({
-          url: "http://localhost/",
+          url: Resource.TrpcServerUrl.value,
           fetch(req) {
             return Resource.Trpc.fetch(req);
           },
@@ -15,12 +15,10 @@ export default {
       ],
     });
 
-    client.create.mutate()
+    await client.create.mutate()
 
     return new Response(
-      JSON.stringify(await client.list.query({
-        name: "Patrick Star",
-      }))
+      JSON.stringify(await client.list.query())
     );
   },
 };
